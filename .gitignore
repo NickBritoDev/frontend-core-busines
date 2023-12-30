@@ -1,0 +1,31 @@
+# Módulos e diretórios de dependências
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Arquivos de build
+/build/
+/dist/
+*.min.js
+
+# Arquivos de ambiente e configuração
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+
+# Arquivos de log
+logs/
+*.log
+
+# Arquivos de IDE e editores
+.vscode/
+.idea/
+
+# Arquivos temporários
+*.tmp
+
+# Outros arquivos específicos
+config.json
