@@ -1,6 +1,6 @@
-const verifyAuth = () => {
-    const auth = localStorage.getItem('TKOCP')
-    return auth
+const verifyAuth = (): boolean => {
+  const auth = localStorage.getItem('TKOCP')
+  return !(auth == null)
 }
 
-export {verifyAuth}
+export { verifyAuth }
