@@ -1,5 +1,5 @@
 import React from 'react'
-import { IonRouterOutlet, IonContent, IonHeader, IonPage } from '@ionic/react'
+import { IonRouterOutlet, IonContent, IonPage } from '@ionic/react'
 import { IonReactRouter } from '@ionic/react-router'
 import { Route, Redirect } from 'react-router'
 import Home from '../pages/home'
@@ -16,9 +16,7 @@ function Layout (): JSX.Element {
   return (
     <IonReactRouter>
       <IonPage>
-        <IonHeader>
           {verifyPathName() && verifyAuth() && <Navbar />}
-        </IonHeader>
         <IonContent>
           {verifyPathName() && verifyAuth() && <Sidebar />}
           <IonRouterOutlet>

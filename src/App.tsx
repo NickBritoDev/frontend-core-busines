@@ -29,7 +29,7 @@ const App: React.FC = () => (
           <BrowserRouter>
             <Layout />
           </BrowserRouter>
-        <ReactQueryDevtools initialIsOpen={false} position='top-right' />
+        <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </HelmetProvider>
   </ChakraProvider>

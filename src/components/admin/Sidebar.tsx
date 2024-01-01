@@ -20,7 +20,7 @@ export default function Sidebar (): JSX.Element {
       display={{ base: 'none', md: 'flex' }}
       flexDir={'column'}
       pos={'fixed'}
-      top={20}
+      bottom={14}
       rounded={'2xl'}
       left={1}
       alignItems={'center'}
