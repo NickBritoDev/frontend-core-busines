@@ -27,7 +27,7 @@ export default function SearchContainer (): JSX.Element {
 
   return (
         <>
-            <Button bg={'transparent'} _hover={{ bg: 'transparent' }} onClick={onOpen}>
+            <Button display={{ base: 'none', md: 'flex' }} bg={'transparent'} _hover={{ bg: 'transparent' }} onClick={onOpen}>
                 <SearchSystem />
             </Button>
             <Modal size={'xl'} finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>

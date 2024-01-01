@@ -30,7 +30,7 @@ export default function Notification (): JSX.Element {
                         borderRadius={'10px 10px 10px 0'} pos={'absolute'} top={-2} right={-3}>{notification.length}</Text>
                 </Box>
             </MenuButton>
-            <MenuList w={'600px'}>
+            <MenuList w={{ base: '100vw', md: '600px' }} mr={2}>
                 {notification.map((item, index) => (
                     <Fragment key={index}>
                         <MenuItem>
