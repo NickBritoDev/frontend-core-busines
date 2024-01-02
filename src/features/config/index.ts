@@ -1,12 +1,12 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 
 interface ConfigAppState {
-  moduleSelected: string | undefined; 
+  moduleSelected: string | undefined
 }
 
 const initialState: ConfigAppState = {
-  moduleSelected: undefined, 
-};
+  moduleSelected: undefined
+}
 
 export const configAppSlice = createSlice({
   name: 'configApp',
@@ -15,13 +15,13 @@ export const configAppSlice = createSlice({
     CONFIG_APP: (state, action: PayloadAction<Partial<ConfigAppState>>) => {
       Object.keys(action.payload).forEach((key) => {
         if (key in state) {
-          state[key as keyof ConfigAppState] = action.payload[key as keyof ConfigAppState];
+          state[key as keyof ConfigAppState] = action.payload[key as keyof ConfigAppState]
         }
-      });
-    },
-  },
-});
+      })
+    }
+  }
+})
 
-export const { CONFIG_APP } = configAppSlice.actions;
+export const { CONFIG_APP } = configAppSlice.actions
 
-export default configAppSlice.reducer;
+export default configAppSlice.reducer

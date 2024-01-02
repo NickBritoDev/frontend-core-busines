@@ -1,9 +1,9 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 
 interface ToastState {
-  trigger: string | boolean;
-  msg: string | boolean;
-  status: string | boolean;
+  trigger: string | boolean
+  msg: string | boolean
+  status: string | boolean
 }
 
 const initialState: ToastState = {
@@ -17,10 +17,10 @@ export const toastSlice = createSlice({
   initialState,
   reducers: {
     executar: (state, action: PayloadAction<Partial<ToastState>>) => {
-      const payloadKeys = Object.keys(action.payload) as Array<keyof ToastState>; // Afirmamos que as chaves são do tipo correto
+      const payloadKeys = Object.keys(action.payload) as Array<keyof ToastState> // Afirmamos que as chaves são do tipo correto
       payloadKeys.forEach((key) => {
-        state[key] = action.payload[key]!;
-      });
+        state[key] = action.payload[key]!
+      })
     }
   }
 })

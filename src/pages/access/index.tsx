@@ -15,20 +15,20 @@ import { FaGooglePlay } from 'react-icons/fa'
 import Register from './components/Register'
 import DividerText from '../../components/global/divider/DividerText'
 import ButtonGoogle from '../../components/global/buttons/ButtonGoogle'
-import { useHistory } from 'react-router'
+import { useNavigate } from 'react-router-dom'
 
 export default function Access (): JSX.Element {
   const [isLoading, setIsLoading] = useState(false)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const toast = useToast()
-  const history = useHistory()
+  const navigate = useNavigate()
 
   const submitAccess = (): void => {
     if (email !== '' && password !== '') {
       setIsLoading(true)
       setTokenForAuth()
-      history.push('/admin/home')
+      navigate('/admin/home')
       location.reload()
     } else if (email === '' || password === '') {
       toast({

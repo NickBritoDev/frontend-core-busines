@@ -6,10 +6,10 @@ import SearchContainer from './SearchContainer'
 
 export default function Navbar (): JSX.Element {
   return (
-    <Flex boxShadow={'none'} py={2} alignItems={'center'} justifyContent={'center'} h={'60px'}>
-      <Image pos={'absolute'} left={-2} w={'100px'} src={LogoCrm} />
-      <SearchContainer />
-      <Flex pos={'absolute'} right={0}>
+    <Flex w={'100%'} pos={'fixed'} bg={'white'} right={0} top={0} py={2} alignItems={'center'} justifyContent={'center'} h={'60px'}>
+        <Image pos={'absolute'} left={-2} w={'100px'} src={LogoCrm} />
+        <SearchContainer />
+      <Flex pos={'absolute'} right={-2} >
         <Notification />
         <Menu>
           <MenuButton borderRadius={'50%'} _active={{ bg: 'transparent' }}
@@ -31,7 +31,6 @@ export default function Navbar (): JSX.Element {
           </MenuList>
         </Menu>
       </Flex>
-
     </Flex>
   )
 }
