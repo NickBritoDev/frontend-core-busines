@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import BackgroundFullPage from '../../../atoms/background/BackgroundFullPage'
+import ImageFullPage from '../../../atoms/image/ImageFullPage'
 import { Box, Divider, Flex, Heading, Text, useToast } from '@chakra-ui/react'
 import InputEmail from '../../../atoms/inputs/InputEmail'
 import InputPassword from '../../../atoms/inputs/InpuptPassword'
@@ -33,14 +33,15 @@ export default function FormLogin (): JSX.Element {
         description: 'Para acessar sua conta preencha os campos email e senha!',
         status: 'info',
         duration: 3000,
-        isClosable: true
+        isClosable: true,
+        position: 'top-right'
       })
     }
   }
 
   return (
     <>
-      <BackgroundFullPage background={Background} />
+      <ImageFullPage background={Background} />
       <Box
         bg={'white'}
         margin={'auto'}

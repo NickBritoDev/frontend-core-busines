@@ -24,7 +24,7 @@ export default function ModalRegister (): JSX.Element {
 
   return (
         <>
-            <Button w={'100%'} bg={'blue.400'} color={'white'} _hover={{ color: 'black', bg: 'gray.100' }} rounded={'2xl'} margin={'-10px auto 0 auto'} onClick={onOpen}>Criar conta</Button>
+            <Button w={'100%'} bg={'blue.400'} color={'white'} _hover={{ color: 'black', bg: 'gray.100' }} rounded={'2xl'} margin={'10px auto 0 auto'} onClick={onOpen}>Criar conta</Button>
             <AlertDialog
                 motionPreset='slideInBottom'
                 leastDestructiveRef={cancelRef}

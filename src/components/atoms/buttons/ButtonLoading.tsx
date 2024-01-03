@@ -10,7 +10,7 @@ interface ButtonLoadingProps extends ButtonProps {
 
 export default function ButtonLoading ({ text, loadingText, bgColor, isLoading, ...props }: ButtonLoadingProps): JSX.Element {
   return (
-    <Button w={'100%'} mt={6} mb={-6} bg={bgColor} {...props} rounded={'2xl'}>
+    <Button w={'100%'} mt={4} mb={2} bg={bgColor} {...props} rounded={'2xl'}>
       {isLoading
         ? (
           <>

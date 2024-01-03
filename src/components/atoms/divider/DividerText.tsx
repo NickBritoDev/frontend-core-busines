@@ -7,7 +7,7 @@ interface DividerTextProps {
 
 export default function DividerText ({ text }: DividerTextProps): JSX.Element {
   return (
-        <Box position='relative' padding={10}>
+        <Box position='relative' padding={4}>
             <Divider />
             <AbsoluteCenter bg='white' px={4}>
                 {text}

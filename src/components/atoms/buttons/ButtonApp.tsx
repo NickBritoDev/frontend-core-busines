@@ -8,13 +8,15 @@ interface ButtonAppProps {
 
 const ButtonApp: React.FC<ButtonAppProps> = ({ icon, text }: ButtonAppProps): JSX.Element => {
   return (
-        <Button display={{ base: 'none', md: 'flex' }} rounded={'xl'} px={2} py={6} textAlign={'left'} color={'white'} bg={'black'} zIndex={9999} border={'solid 2px white'}>
-            {icon}
-            <Box ml={4}>
-                <Text>Baixar APP</Text>
-                <Text>{text}</Text>
-            </Box>
-        </Button>
+    <Button display={{ base: 'none', md: 'flex' }} _hover={{ bg: 'white', color: 'black', border: 'solid 2px black' }}
+      rounded={'xl'} px={2} py={6} textAlign={'left'}
+      color={'white'} bg={'black'} zIndex={9999} border={'solid 2px white'}>
+      {icon}
+      <Box ml={4}>
+        <Text>Baixar APP</Text>
+        <Text>{text}</Text>
+      </Box>
+    </Button>
   )
 }
 

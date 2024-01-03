@@ -11,7 +11,7 @@ export default function ButtonGoogle ({ text }: ButtonGoogleProps): JSX.Element 
         <Button
             _hover={{ bg: 'blue.400', color: 'white' }}
             rounded={'2xl'}
-            mt={-6}
+            mt={2}
             display={'flex'}
             alignItems={'center'}
             justifyContent={'center'}
