@@ -1,23 +1,20 @@
 import React, { useState } from 'react'
-import 'react-chat-widget/lib/styles.css'
-import '@fontsource/poppins'
-import '../../theme/style.css'
+import BackgroundFullPage from '../../../atoms/background/BackgroundFullPage'
 import { Box, Divider, Flex, Heading, Text, useToast } from '@chakra-ui/react'
-import ButtonLoading from '../../components/global/buttons/ButtonLoading'
-import InputEmail from '../../components/global/inputs/InputEmail'
-import { setTokenForAuth } from '../../helpers/setTokenForAuth'
-import InputPassword from '../../components/global/inputs/InpuptPassword'
-import Background from './../../../public/crm-background.jpeg'
-import BackgroundFullPage from '../../components/global/background/BackgroundFullPage'
-import ButtonApp from '../../components/global/download/ButtonApp'
+import InputEmail from '../../../atoms/inputs/InputEmail'
+import InputPassword from '../../../atoms/inputs/InpuptPassword'
+import ButtonLoading from '../../../atoms/buttons/ButtonLoading'
+import DividerText from '../../../atoms/divider/DividerText'
+import ButtonGoogle from '../../../atoms/buttons/ButtonGoogle'
+import ButtonApp from '../../../atoms/buttons/ButtonApp'
 import { SiApple } from 'react-icons/si'
 import { FaGooglePlay } from 'react-icons/fa'
-import Register from './components/Register'
-import DividerText from '../../components/global/divider/DividerText'
-import ButtonGoogle from '../../components/global/buttons/ButtonGoogle'
+import { setTokenForAuth } from '../../../../helpers/setTokenForAuth'
 import { useNavigate } from 'react-router-dom'
+import Background from '../../../../../public/crm-background.jpeg'
+import ModalRegister from '../modal/ModalRegister'
 
-export default function Access (): JSX.Element {
+export default function FormLogin (): JSX.Element {
   const [isLoading, setIsLoading] = useState(false)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -42,7 +39,7 @@ export default function Access (): JSX.Element {
   }
 
   return (
-    <Box h={'100vh'} display={'flex'} justifyContent={'center'} alignItems={'center'}>
+    <>
       <BackgroundFullPage background={Background} />
       <Box
         bg={'white'}
@@ -65,20 +62,19 @@ export default function Access (): JSX.Element {
         <Text textAlign={'right'} mt={4} color={'blue.600'}>Esqueceu sua senha ?</Text>
         <ButtonLoading onClick={submitAccess} isLoading={isLoading} text={'Entrar'} loadingText={'Acessando...'} bgColor={'orange'} />
 
-        <DividerText text={'ou'}/>
+        <DividerText text={'ou'} />
 
-        <ButtonGoogle text={'Entrar com sua conta Google'}/>
+        <ButtonGoogle text={'Entrar com sua conta Google'} />
 
-        <DividerText text={'Registre-se'}/>
+        <DividerText text={'Registre-se'} />
 
-        <Register />
+        <ModalRegister />
       </Box>
 
       <Flex pos={'absolute'} bottom={4} gap={4}>
         <ButtonApp text='Apple Store' icon={<SiApple fontSize={30} />} />
         <ButtonApp text='Play Store' icon={<FaGooglePlay fontSize={30} />} />
       </Flex>
-
-    </Box>
+    </>
   )
 }

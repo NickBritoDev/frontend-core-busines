@@ -1,9 +1,9 @@
 import { Box, Flex, Input } from '@chakra-ui/react'
 import React from 'react'
 import { FcSearch } from 'react-icons/fc'
-import searchAnimation from '../../utils/searchAnimation'
+import searchAnimation from '../../../utils/searchAnimation'
 
-export default function SearchSystem (): JSX.Element {
+export default function InputSearchSystem (): JSX.Element {
   const animatedSearch = searchAnimation()
 
   return (

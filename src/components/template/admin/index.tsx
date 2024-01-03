@@ -1,8 +1,8 @@
 import React from 'react'
-import Navbar from '../../components/admin/Navbar'
-import Sidebar from '../../components/admin/Sidebar'
 import { Box, ChakraProvider } from '@chakra-ui/react'
 import { Outlet } from 'react-router-dom'
+import Navbar from '../../molecules/navbar/Navbar'
+import Sidebar from '../../molecules/sidebar/Sidebar'
 
 export default function Admin (): JSX.Element {
   return (

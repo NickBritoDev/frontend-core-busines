@@ -1,9 +1,9 @@
 import { Box, Button, Divider, Flex, Input, List, ListIcon, ListItem, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, useDisclosure } from '@chakra-ui/react'
 import React, { type ChangeEvent, useState } from 'react'
-import SearchSystem from './SearchSystem'
 import { FaSlackHash } from 'react-icons/fa'
 import { FcSearch } from 'react-icons/fc'
-import searchAnimation from '../../utils/searchAnimation'
+import InputSearchSystem from '../../atoms/inputs/InputSearchSystem'
+import searchAnimation from '../../../utils/searchAnimation'
 
 export default function SearchContainer (): JSX.Element {
   const animatedSearch = searchAnimation()
@@ -28,7 +28,7 @@ export default function SearchContainer (): JSX.Element {
   return (
         <>
             <Button display={{ base: 'none', md: 'flex' }} bg={'transparent'} _hover={{ bg: 'transparent' }} onClick={onOpen}>
-                <SearchSystem />
+                <InputSearchSystem />
             </Button>
             <Modal size={'xl'} finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />

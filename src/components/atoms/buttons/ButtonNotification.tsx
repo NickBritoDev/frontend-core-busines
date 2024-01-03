@@ -5,7 +5,7 @@ import { MdOutlineTipsAndUpdates } from 'react-icons/md'
 import { GrCompliance } from 'react-icons/gr'
 import { LuCalendarClock } from 'react-icons/lu'
 
-export default function Notification (): JSX.Element {
+export default function ButtonNotification (): JSX.Element {
   const notification = [
     {
       text: 'Sua fatura vence dia 05/01 não deixe que vença, pague para continuar explorando o melhor do mundo do crm.',

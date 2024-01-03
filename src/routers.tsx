@@ -1,12 +1,12 @@
 import React from 'react'
 import { Navigate, useRoutes } from 'react-router-dom'
-import Public from './layout/public'
-import Access from './pages/access'
-import Notfound from './pages/errors/404'
-import Unauthorized from './pages/errors/401'
-import Admin from './layout/admin'
+import Access from './components/pages/access'
+import Notfound from './components/pages/errors/404'
+import Unauthorized from './components/pages/errors/401'
 import { verifyAuth } from './helpers/verifyAuth'
-import Home from './pages/home'
+import Home from './components/pages/home'
+import Public from './components/template/public'
+import Admin from './components/template/admin'
 
 export default function Router (): any {
   const routing = useRoutes([
