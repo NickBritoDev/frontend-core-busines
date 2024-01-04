@@ -1,5 +1,5 @@
-import { Image } from '@chakra-ui/react'
 import React from 'react'
+import { Image } from '@chakra-ui/react'
 import LogoCrm from '../../../../public/logo-crm-sem-letras.png'
 
 export default function ImageLogoSM (): JSX.Element {

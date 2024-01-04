@@ -2,7 +2,7 @@ import { Image } from '@chakra-ui/react'
 import React from 'react'
 
 interface BackgroundFullPageProps {
-  background: string // O caminho da imagem
+  background: string
 }
 
 const BackgroundFullPage: React.FC<BackgroundFullPageProps> = ({ background }): JSX.Element => {
@@ -12,9 +12,9 @@ const BackgroundFullPage: React.FC<BackgroundFullPageProps> = ({ background }): 
             left={0}
             pos={'fixed'}
             src={background}
-            w="100vw" // largura igual à largura da tela
-            h="100vh" // altura igual à altura da tela
-            objectFit="cover" // Mantém a proporção da imagem e cobre toda a área
+            w={'100vw'}
+            h={'100vh'}
+            backgroundPosition={'center'}
         />
   )
 }

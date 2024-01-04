@@ -12,15 +12,17 @@ import {
   Button,
   useDisclosure
 } from '@chakra-ui/react'
-import React from 'react'
+import React, { useState } from 'react'
 import InputEmail from '../../../atoms/inputs/InputEmail'
 import InputPassword from '../../../atoms/inputs/InpuptPassword'
 import DividerText from '../../../atoms/divider/DividerText'
-import ButtonGoogle from '../../../atoms/buttons/ButtonGoogle'
+import ButtonLoading from '../../../atoms/buttons/ButtonLoading'
+import { FcGoogle } from 'react-icons/fc'
 
 export default function ModalRegister (): JSX.Element {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const cancelRef = React.useRef()
+  const [isLoadingGoogle, setIsLoadingGoogle] = useState(false)
 
   return (
         <>
@@ -57,7 +59,7 @@ export default function ModalRegister (): JSX.Element {
                     <DividerText text='ou' />
 
                     <Box p={4}>
-                        <ButtonGoogle text={'Registre-se com sua conta Google'} />
+                      <ButtonLoading icon={FcGoogle} onClick={() => { setIsLoadingGoogle(true) }} text={'Entrar com sua conta Google'} loadingText={'Solicitando acesso ao Google'} bgColor={'gray.200'} isLoading={isLoadingGoogle} />
                     </Box>
 
                 </AlertDialogContent>

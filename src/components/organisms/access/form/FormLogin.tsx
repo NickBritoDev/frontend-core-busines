@@ -5,17 +5,18 @@ import InputEmail from '../../../atoms/inputs/InputEmail'
 import InputPassword from '../../../atoms/inputs/InpuptPassword'
 import ButtonLoading from '../../../atoms/buttons/ButtonLoading'
 import DividerText from '../../../atoms/divider/DividerText'
-import ButtonGoogle from '../../../atoms/buttons/ButtonGoogle'
 import ButtonApp from '../../../atoms/buttons/ButtonApp'
 import { SiApple } from 'react-icons/si'
 import { FaGooglePlay } from 'react-icons/fa'
 import { setTokenForAuth } from '../../../../helpers/setTokenForAuth'
 import { useNavigate } from 'react-router-dom'
-import Background from '../../../../../public/crm-background.jpeg'
+import Background from '../../../../../public/crm-background2.jpeg'
 import ModalRegister from '../modal/ModalRegister'
+import { FcGoogle } from 'react-icons/fc'
 
 export default function FormLogin (): JSX.Element {
   const [isLoading, setIsLoading] = useState(false)
+  const [isLoadingGoogle, setIsLoadingGoogle] = useState(false)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const toast = useToast()
@@ -25,8 +26,9 @@ export default function FormLogin (): JSX.Element {
     if (email !== '' && password !== '') {
       setIsLoading(true)
       setTokenForAuth()
-      navigate('/admin/home')
-      location.reload()
+      setTimeout(() => {
+        navigate('/admin/home')
+      }, 3000)
     } else if (email === '' || password === '') {
       toast({
         title: 'Preencha todos os campos.',
@@ -65,7 +67,7 @@ export default function FormLogin (): JSX.Element {
 
         <DividerText text={'ou'} />
 
-        <ButtonGoogle text={'Entrar com sua conta Google'} />
+        <ButtonLoading icon={FcGoogle} onClick={() => { setIsLoadingGoogle(true) }} text={'Entrar com sua conta Google'} loadingText={'Solicitando acesso ao Google'} bgColor={'gray.200'} isLoading={isLoadingGoogle} />
 
         <DividerText text={'Registre-se'} />
 
